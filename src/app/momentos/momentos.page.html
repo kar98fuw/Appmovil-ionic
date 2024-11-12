@@ -1,0 +1,59 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Momentos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <!-- Segundo ion-header con collapse -->
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Momentos</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- Contenedor del card centrado -->
+  <div class="card-container">
+    
+    <!-- Card 1 -->
+    <ion-card (click)="toggleCard1()" [class.expanded]="isExpanded1">
+      <img src="assets/That-Time-I-Got-Reincarnated-As-A-Slime-Chapter-94-Rimuru.webp" alt="Thumbnail del video" />
+      <ion-card-header>
+        <ion-card-title>¡Rimuru vs Hinata!</ion-card-title>
+      </ion-card-header>
+      <ion-card-content *ngIf="isExpanded1">
+        
+        <iframe width="100%" height="200" src="https://www.youtube.com/embed/T12a6aeFtwA" title="Rimuru vs Hinata | That Time I Got Reincarnated as a Slime Season 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        
+      </ion-card-content>
+    </ion-card>
+
+    <!-- Card 2 -->
+    <ion-card (click)="toggleCard2()" [class.expanded]="isExpanded2">
+      <img src="assets/ExNEFBVVkAkbMmq.jpg" alt="Thumbnail del video" />
+      <ion-card-header>
+        <ion-card-title>¡Diablo vs Razen!</ion-card-title>
+      </ion-card-header>
+      <ion-card-content *ngIf="isExpanded2">
+        <iframe width="100%" height="200" src="https://www.youtube.com/embed/FE6zsFbQf_Y" title="Noir vs Razen | That Time I Got Reincarnated as a Slime Season 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        
+      </ion-card-content>
+    </ion-card>
+
+    <!-- Card 3 -->
+    <ion-card (click)="toggleCard3()" [class.expanded]="isExpanded3">
+      <img src="assets/hq720.jpg" alt="Thumbnail del video" />
+      <ion-card-header>
+        <ion-card-title>¡Rimuru resucita a todos!</ion-card-title>
+      </ion-card-header>
+      <ion-card-content *ngIf="isExpanded3">
+        <iframe width="100%" height="200" src="https://www.youtube.com/embed/EuGE3XsUXMo" title="Spirit Resurrection | That Time I Got Reincarnated as a Slime Season 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+       
+      </ion-card-content>
+    </ion-card>
+    
+  </div>
+</ion-content>
